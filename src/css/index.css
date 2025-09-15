@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body{
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
 h1 {
     font-size: 24px;
     font-weight: normal;
@@ -5,4 +14,71 @@ h1 {
     overflow: visible;
     padding: 0px;
     text-align: center;
+}
+
+#MainNav{
+    border-bottom: 1px solid black;
+}
+
+#NavLogoText{
+    font-family: "Kode Mono", monospace;
+    font-weight: 600;
+}
+
+#NavBurgerMenu{
+    border: 1px solid black;
+}
+
+.navbar-toggler-icon {
+    background-image: none!important;
+    background-color: black;
+    border-radius: 1px;
+    height: 2px;
+    width: 25px;
+    margin: 10px 0;
+    position: relative;
+    transition: all 0.35s ease;
+    transform-origin: center;
+}
+
+.navbar-toggler-icon::before {
+    display: block;
+    background-color: black;
+    border-radius: 1px;
+    height: 2px;
+    content: "";
+    position: relative;
+    top: -6px;
+    transition: all 0.35s ease;
+    transform-origin: center;
+}
+
+.navbar-toggler-icon::after {
+    display: block;
+    background-color: black;
+    border-radius: 1px;
+    height: 2px;
+    content: "";
+    position: relative;
+    top: 4px;
+    transition: all 0.35s ease;
+    transform-origin: center;
+}
+
+.navbar-dark .navbar-toggler-icon,
+.navbar-dark .navbar-toggler-icon::before,
+.navbar-dark .navbar-toggler-icon::after {
+    background-color: black;
+}
+
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon {
+    transform: rotate(45deg);
+}
+
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon::before {
+    opacity: 0;
+}
+
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
+    transform: rotate(-90deg) translateX(6px);
 }

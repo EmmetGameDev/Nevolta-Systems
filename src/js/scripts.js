@@ -1,3 +1,5 @@
+// Navbar animate on scroll
+
 document.addEventListener("scroll", function () {
   const navbar = document.querySelector(".navbar");
   if (window.scrollY > 50) { // adjust threshold as needed
@@ -6,6 +8,8 @@ document.addEventListener("scroll", function () {
     navbar.classList.remove("scrolled");
   }
 });
+
+// Typing and erasing text header
 
 let TxtRotate = function (el, toRotate, period) {
   this.toRotate = toRotate;
@@ -60,3 +64,30 @@ window.onload = function () {
     }
   }
 };
+
+// Sliding pointers with delay
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function showPointer(el, yn){
+  el.classList.toggle('pointer-animation', !!yn);
+}
+
+function showList(yn){
+  const textPointers = document.querySelectorAll('.textPointer');
+  for (let i = 0; i < textPointers.length; i++){
+    setTimeout(() => showPointer(textPointers[i], yn), i * 300);
+  }
+}
+
+const intersectionCallback = (entries) => {
+  for (const entry of entries) {
+    if (entry.isIntersecting) showList(true);
+    else showList(false);
+  }
+}
+
+const observer = new IntersectionObserver(intersectionCallback, { threshold: 0.25 });
+document.querySelectorAll('.textPointerFirst').forEach(item => observer.observe(item));

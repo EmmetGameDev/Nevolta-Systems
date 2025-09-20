@@ -41,8 +41,8 @@ h1 {
 
 #MainNav.scrolled{
     background-color: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(7px);
-    -webkit-backdrop-filter: blur(7px);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     border-bottom: 1px solid transparent;
 }
 
@@ -225,6 +225,10 @@ h1 {
     font-weight: 400;
 }
 
+.modelName{
+    font-size: 30px;
+}
+
 .txt-rotate > .wrap {
     border-right: 0.08em solid #666;
 }
@@ -304,16 +308,26 @@ h1 {
     padding: 5px;
     border: 1px solid black;
     margin-top: 30px;
+    overflow: hidden;
 }
 
 .card-img-top{
     height: 10vw;
     object-fit: cover;
     object-position: 100% 25%;
+    transition: all 0.3s ease;
 }
 
 .kitsImg{
     object-position: 100% 50%;
+}
+
+.card:hover .card-img-top{
+    object-position: 100% 30%;
+}
+
+.card:hover .kitsImg{
+    object-position: 100% 60%;
 }
 
 @media (max-width: 600px){
@@ -333,33 +347,87 @@ h1 {
     flex-wrap: nowrap;
     flex-direction: row;
     font-size: 10px;
+    position: relative;
+}
+
+.scrollTrack {
+  display: flex;
+  flex-wrap: nowrap;
+  animation: rightToLeft 20s linear infinite;
 }
 
 .scrollBox{
     width: auto;
-    height: auto;
-    background-color: grey;
-    padding: 10px;
+    height: 7em;
+    background-color: transparent;
+    padding: 15px;
     border-radius: 10px;
+    border: 1px solid black;
     text-align: center;
-    margin-right: 30px;
-    animation-name: rightToLeft;
-    animation-duration: 5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+    margin-right: 10px;
+    white-space: nowrap;
 }
 
-.target {
-  font-weight: bold;
-  color: #fbfbfb;
-  
+@media (max-width: 600px){
+    .scrollBox{
+        height: 6em;
+    }
 }
 
 @keyframes rightToLeft {
   0% {
-    transform: translateX(0px);
+    transform: translateX(0);
   }
   100% {
-    transform: translateX(-1550px);
+    transform: translateX(-50%);
   }
+}
+
+.columnHeading{
+    font-size: 40px;
+    float: left;
+    margin-bottom: 20px;
+    margin-top: 5vw;
+}
+
+.columnText{
+    float: left;
+    font-size: 20px;
+    text-align: left;
+}
+
+.photoColumnImg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.contentRow{
+    margin-top: 30px;
+}
+
+.textPointer{
+    margin-left: 0px;
+    font-size: 35px;
+    opacity: 0;
+    transition: all 1s ease;
+    float: left;
+    clear: left;
+}
+
+@media (max-width: 992px){
+    .textPointer{
+        font-size: 25px;
+    }
+}
+
+.smallIcon{
+    width: 1em;
+    margin-left: 5px;
+}
+
+.pointer-animation{
+    margin-left: 30px;
+    opacity: 1;
 }

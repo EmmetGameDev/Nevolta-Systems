@@ -185,6 +185,7 @@ h1 {
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
     padding: 30px;
+    padding-top: 0px;
 }
 
 .footerItem{
@@ -195,11 +196,18 @@ h1 {
 
 .footerLinksList{
     list-style: none;
+    margin-top: 10px;
 }
 
 .footerLogo{
     margin-top: 20px;
     margin-bottom: 10px;
+}
+
+@media (max-width: 768px){
+    .footerLogo{
+        margin-top: 10px;
+    }
 }
 
 .row{
@@ -302,6 +310,7 @@ h1 {
 @media (max-width: 768px){
     .btnBottomPage{
         margin-top: 1vw;
+        margin-bottom: 50px;
     }
 }
 
@@ -537,4 +546,126 @@ h1 {
     width: 100%;
     margin-top: -45px;
     margin-bottom: -20px;
+}
+
+
+
+
+
+/* Derived from specs.html */
+.mainPhotoDiv{
+    height: 430px;
+    background-image: url('../img/photos/P1050515.JPG');
+    background-size: cover;
+    background-position: center bottom;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 3rem;
+    margin-left: -12px;
+    margin-right: -12px;
+}
+
+.demo{
+    height: 2000px;
+}
+
+.blogHeading{
+    font-size: 40px;
+    float: left;
+    margin-top: 2vw;
+    text-align: left;
+    font-weight: 600;
+}
+
+@media (max-width: 768px){
+    .mainPhotoDiv{
+        background-position: 75% -150px;
+    }
+}
+
+.styled-table {
+    border-collapse: collapse;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 768px){
+    .styled-table{
+        font-size: 14px;
+    }
+}
+
+.styled-table thead tr {
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    color: white;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr{
+    background-color: transparent;
+}
+
+.styled-table tbody tr{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.styled-table tbody tr:last-of-type{
+    border-bottom: none;
+}
+
+.tableFirst{
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.tableSecond{
+    width: 100%;
+}
+
+.tableTitle{
+    text-align: left;
+    margin-bottom: 15px;
+    font-family: "Kode Mono", monospace;
+    font-weight: 600;
+}
+
+.squarePhotoHolder{
+    margin-top: 50px;
+}
+
+.blogSquarePhoto{
+    width: 75%;
+    object-fit: cover;
+    opacity: 0;
+    border-radius: 10px;
+    transition: all 0.6s ease;
+}
+
+.blogText{
+    padding: 20px;
+    opacity: 0;
+}
+
+.photoSquareAnim{
+    opacity: 1;
+    transition: all 0.6s ease;
+}
+
+.explainPhoto{
+    margin-bottom: 30px;
 }

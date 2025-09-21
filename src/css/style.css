@@ -669,3 +669,30 @@ h1 {
 .explainPhoto{
     margin-bottom: 30px;
 }
+
+
+
+
+
+/* Following code was derived from capabilities.html */
+
+.capabilitiesHeroPhoto{
+    height: 430px;
+    background-image: url('../img/photos/P1050527.JPG');
+    background-size: cover;
+    background-position: bottom center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 3rem;
+    margin-left: -12px;
+    margin-right: -12px;
+}
+
+@media (max-width: 1500px){
+    .capabilitiesHeroPhoto{
+        background-position: bottom 150px center;
+    }
+}

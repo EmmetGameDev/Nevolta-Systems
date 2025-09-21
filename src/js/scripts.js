@@ -91,3 +91,121 @@ const intersectionCallback = (entries) => {
 
 const observer = new IntersectionObserver(intersectionCallback, { threshold: 0.25 });
 document.querySelectorAll('.textPointerFirst').forEach(item => observer.observe(item));
+
+// Bar chart
+
+var options = {
+  chart: {
+    animations: {
+      speed: 2000
+    },
+    toolbar:{
+      show: false,
+    },
+    type: 'bar',
+    height: "250px",
+    fontFamily: "Kode Mono, monospace"
+  },
+  yaxis: {
+    labels: {
+      style: {
+        fontSize: '14px',
+      }
+    }
+  },
+  colors: ['black'],
+  plotOptions: {
+    bar: {
+      horizontal: true,
+      barHeight: "30%",
+      borderRadius: 3
+    }
+  },
+  xaxis: {
+    labels: {
+      show: false
+    }
+  },
+  grid: {
+    show: true,
+    borderColor: 'transparent',   // hides top/bottom chart border
+    xaxis: {
+      lines: { show: false }       // optional: remove x-axis grid lines if needed
+    },
+    yaxis: {
+      lines: { show: false }       // optional: remove y-axis grid lines if needed
+    }
+  },
+  states: {
+    hover: {
+      filter: {
+        type: 'none'
+      }
+    },
+    active: {
+      filter: {
+        type: 'none'
+      }
+    }
+  },
+  dataLabels: {
+    enabled: false
+  },
+  tooltip: {
+    enabled: false
+  },
+  series: [{
+    name: "Consoles",
+    data: [{
+      x: 'Game Boy',
+      y: 100
+    }, {
+      x: 'SNES',
+      y: 400
+    }, {
+      x: 'GBA',
+      y: 1000
+    }, {
+      x: 'PS1',
+      y: 3000
+    }, {
+      x: 'Nevolta V',
+      y: 10000
+    }]
+  }]
+}
+
+var chart = new ApexCharts(document.querySelector("#chart"), options);
+chart.render();
+chart.hideSeries("Consoles");
+
+
+const chartObsCallback = (entries) => {
+  for (const entry of entries) {
+    if (entry.isIntersecting){
+      chart.showSeries("Consoles");
+    }else{
+      chart.hideSeries("Consoles");
+    }
+  }
+}
+
+const chartObs = new IntersectionObserver(chartObsCallback, { threshold: 0.25 });
+document.querySelectorAll('.chart').forEach(item => chartObs.observe(item));
+
+// Photo Animations
+
+function showPhoto(el){
+  el.classList.add("photoAnim");
+}
+
+const photoObsCallback = (entries) => {
+  for (const entry of entries) {
+    if (entry.isIntersecting){
+      setTimeout(() => showPhoto(entry.target), 300);
+    }
+  }
+}
+
+const photoObs = new IntersectionObserver(photoObsCallback, { threshold: 0.25 });
+document.querySelectorAll('.photoColumnImg').forEach(item => photoObs.observe(item));

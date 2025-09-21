@@ -12,7 +12,7 @@ body{
     font-style: normal;
     font-size: 16px;
     width: 100%; 
-    height: 4000px;
+    height: auto;
     background-color: #eaebeb;
     background-position: center bottom;
     background-image: url('../img/wavesBg.svg');
@@ -277,6 +277,10 @@ h1 {
     transition: all 0.3s ease;
 }
 
+.btnBottomPage{
+    margin-top: 75px;
+}
+
 @media (max-width: 992px) {
     .getYoursBtn{
         width: 200px;
@@ -289,6 +293,15 @@ h1 {
     }
     .text-alt-heading{
         margin-top: 5vw;
+    }
+    .btnBottomPage{
+        margin-top: 125px;
+    }
+}
+
+@media (max-width: 768px){
+    .btnBottomPage{
+        margin-top: 1vw;
     }
 }
 
@@ -348,6 +361,7 @@ h1 {
     flex-direction: row;
     font-size: 10px;
     position: relative;
+    margin-bottom: 15px;
 }
 
 .scrollTrack {
@@ -390,10 +404,64 @@ h1 {
     margin-top: 5vw;
 }
 
+.columnHeadingR{
+    font-size: 40px;
+    float: right;
+    margin-bottom: 20px;
+    margin-top: 5vw;
+}
+
+.headingPhotoHorizontal{
+    margin-top: 1vw;
+}
+
 .columnText{
     float: left;
     font-size: 20px;
     text-align: left;
+}
+
+.columnTextR{
+    float: right;
+    font-size: 20px;
+    text-align: right;
+}
+
+@media (max-width: 992px){
+    .columnTextR{
+        font-size: 16px;
+    }
+    .columnText{
+        font-size: 16px;
+    }
+    .columnHeading{
+        margin-top: 5px;
+    }
+    .columnHeadingR{
+        margin-top: 5px;
+    }
+    .photoBottomPage{
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 768px){
+    .columnTextR{
+        font-size: 20px;
+    }
+    .columnText{
+        font-size: 20px;
+    }
+    .columnHeading{
+        margin-top: 5vw;
+    }
+    .columnHeadingR{
+        margin-top: 5vw;
+    }
+}
+
+.smallAstrix{
+    font-size: 10px;
 }
 
 .photoColumnImg{
@@ -401,10 +469,23 @@ h1 {
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
+    opacity: 0;
+    margin-top: 50px;
+    transition: all 0.3s ease;
+}
+
+.photoHorizontal{
+    max-height: 500px;
+}
+
+.photoAnim{
+    opacity: 1;
+    margin-top: 0px;
 }
 
 .contentRow{
-    margin-top: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .textPointer{
@@ -430,4 +511,30 @@ h1 {
 .pointer-animation{
     margin-left: 30px;
     opacity: 1;
+}
+
+.apexcharts-yaxis-label {
+  font-size: 12px;
+}
+
+.apexcharts-yaxis-label:last-of-type {
+  font-size: 16px;
+  font-weight: bold;
+  fill: #000;
+}
+
+.contentHeader{
+    margin-top: 40px;
+    font-size: 40px;
+}
+
+.chartHolder{
+    display: flex;
+    width: 100%;
+}
+
+.chartHolder #chart{
+    width: 100%;
+    margin-top: -45px;
+    margin-bottom: -20px;
 }

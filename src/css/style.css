@@ -179,6 +179,24 @@ h1 {
   box-shadow: none;
 }
 
+/* Safari detection due to problems with positioning */
+@supports (-webkit-hyphens: none) {
+    #MainNav .navbar-toggler {
+        margin-top: -50px;
+        margin-left: auto !important;
+    }
+    
+    @media (min-width: 992px){
+        #MainNav .navbar-brand{
+            max-width: 233px;
+        }
+
+        .navbar-collapse{
+            width: 560px;
+        }
+    }
+}
+
 .siteFooter{
     margin-top: auto;
     background-color: rgba(0, 0, 0, 0.1);

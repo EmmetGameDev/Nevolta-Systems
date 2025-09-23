@@ -343,7 +343,7 @@ h1 {
     -webkit-backdrop-filter: blur(7px);
 }
 
-.card{
+.mainCard{
     text-align: left;
     padding: 5px;
     border: 1px solid black;
@@ -351,7 +351,7 @@ h1 {
     overflow: hidden;
 }
 
-.card-img-top{
+.mainCardImage{
     height: 10vw;
     object-fit: cover;
     object-position: 100% 25%;
@@ -362,16 +362,16 @@ h1 {
     object-position: 100% 50%;
 }
 
-.card:hover .card-img-top{
+.mainCard:hover .mainCardImage{
     object-position: 100% 30%;
 }
 
-.card:hover .kitsImg{
+.mainCard:hover .kitsImg{
     object-position: 100% 60%;
 }
 
 @media (max-width: 600px){
-    .card-img-top{
+    .mainCard .mainCardImage{
         height: 40vw;
         object-position: 100% 20%;
     }
@@ -413,6 +413,14 @@ h1 {
     .scrollBox{
         height: 6em;
     }
+}
+
+.scrollIconBox{
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border: none;
+    height: 8em;
 }
 
 @keyframes rightToLeft {
@@ -713,4 +721,73 @@ h1 {
     .capabilitiesHeroPhoto{
         background-position: bottom 150px center;
     }
+}
+
+.blogTextBlock{
+    text-align: left;
+}
+
+.codeBlock{
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 4px;
+    padding-left: 6px;
+    padding-right: 6px;
+    white-space: nowrap;
+    color: black;
+}
+
+.bigCodeHolder{
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.codeBlockLarge{
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border-radius: 10px;
+    white-space: pre-wrap;
+    text-align: left;
+    float: left;
+    margin-right: auto;
+    padding: 10px;
+    color: black;
+    margin-right: 15px;
+}
+
+.customLink{
+    color: black;
+}
+
+.consolesListCap{
+    margin-top: 0;
+    text-align: left;
+    list-style-type: none;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+@media (min-width: 768){
+    .blogBigPhoto{
+        transform: rotate(90);
+    }
+}
+
+.blogRow:last-of-type{
+    margin-bottom: 30px;
+}
+
+/* Following code was derived from products.html */
+
+.productsCard{
+    text-align: left;
+}
+
+.productsCardBody{
+    padding: 20px;
 }

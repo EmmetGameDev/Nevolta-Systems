@@ -25,3 +25,20 @@ const photoSquareObsCallback = (entries) => {
 
 const photoSquareObs = new IntersectionObserver(photoSquareObsCallback, { threshold: 0.25 });
 document.querySelectorAll('.blogSquarePhotoAnim').forEach(item => photoSquareObs.observe(item));
+
+// Photo Animations
+
+function showPhoto(el){
+  el.classList.add("photoAnim");
+}
+
+const photoObsCallback = (entries) => {
+  for (const entry of entries) {
+    if (entry.isIntersecting){
+      setTimeout(() => showPhoto(entry.target), 300);
+    }
+  }
+}
+
+const photoObs = new IntersectionObserver(photoObsCallback, { threshold: 0.25 });
+document.querySelectorAll('.photoColumnImg').forEach(item => photoObs.observe(item));

@@ -791,3 +791,33 @@ h1 {
 .productsCardBody{
     padding: 20px;
 }
+
+.productsRow{
+    margin-bottom: 30px;
+}
+
+.productsCol{
+    padding: 20px;
+}
+
+.previousPrice{
+    text-decoration:line-through;
+    color: #999999;
+}
+
+.pricePoint{
+    color: #0dbf63;
+}
+
+
+/* Following code was derived from kits.html */
+
+.kitsHeroPhoto{
+    width: 100vw;
+    height: auto;
+    background-image: url('../img/photos/P1050486.JPG');
+    background-size: contain;
+    background-attachment: fixed;
+    margin-left: -12px;
+    margin-right: -12px;
+}

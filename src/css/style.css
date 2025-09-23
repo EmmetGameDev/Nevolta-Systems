@@ -817,7 +817,6 @@ h1 {
     height: auto;
     background-image: url('../img/photos/P1050486.JPG');
     background-size: contain;
-    background-attachment: fixed;
     margin-left: -12px;
     margin-right: -12px;
 }

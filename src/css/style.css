@@ -772,7 +772,7 @@ h1 {
     font-weight: 400;
 }
 
-@media (min-width: 768){
+@media (min-width: 768px){
     .blogBigPhoto{
         transform: rotate(90);
     }
@@ -810,13 +810,81 @@ h1 {
 }
 
 
+
 /* Following code was derived from kits.html */
 
-.kitsHeroPhoto{
-    width: 100vw;
-    height: auto;
-    background-image: url('../img/photos/P1050486.JPG');
-    background-size: contain;
-    margin-left: -12px;
-    margin-right: -12px;
+.kitRow{
+    padding: 20px;
+}
+
+.itemCar{
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.carousel .carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+}
+
+.prodName{
+    font-family: "Kode mono", monospace;
+    font-weight: 600;
+    text-align: left;
+    font-size: 40px;
+    margin-top: 4vw;
+}
+
+@media (max-width: 992px){
+    .prodName{
+        font-size: 30px;
+    }
+}
+
+.stars{
+    display: flex;
+    flex-direction: row;
+    margin-top: -15px;
+}
+
+.starIcon{
+    width: 16px;
+    padding: 1px;
+}
+
+.starText{
+    text-align: center;
+    padding: 5px;
+    margin-top: 16px;
+}
+
+.optButtons{
+    text-align: left;
+}
+
+.button-opt{
+    font-size: 14px;
+    height: 3em;
+    border-radius: 10px;
+    border: 1px solid black;
+    transition: all 0.3s ease;
+}
+
+.optActive{
+    border: 2px solid black;
+    font-size: 16px;
+}
+
+.kitPrice{
+    text-align: left;
+    margin-top: 20px;
+    font-family: "Kode mono", monospace;
+    font-weight: 600;
+    color: #0dbf63;
+}
+
+.oldPrice{
+    text-decoration:line-through;
+    color: #999999;
 }

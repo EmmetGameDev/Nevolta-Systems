@@ -42,3 +42,33 @@ const photoObsCallback = (entries) => {
 
 const photoObs = new IntersectionObserver(photoObsCallback, { threshold: 0.25 });
 document.querySelectorAll('.photoColumnImg').forEach(item => photoObs.observe(item));
+
+// Kits only one button active
+
+function setPageForItem(el){
+  switch (el.id) {
+    case "assembled":
+      $('.kitPrice').contents().first()[0].textContent = "$54.99 ";
+      $('.kitPrice .oldPrice').text("$64.99");
+      break;
+    case "DIYParts":
+      $('.kitPrice').contents().first()[0].textContent = "$49.99 ";
+      $('.kitPrice .oldPrice').text("$59.99");
+      break;
+    case "DIYFiles":
+      $('.kitPrice').contents().first()[0].textContent = "$44.99 ";
+      $('.kitPrice .oldPrice').text("$54.99");
+      break;
+
+    default:
+      break;
+  }
+}
+
+jQuery(function($) {
+  $('.button-opt').click(function() {
+    $('.button-opt').not(this).removeClass('optActive');
+    $(this).addClass('optActive');
+    setPageForItem(this);
+  });
+});

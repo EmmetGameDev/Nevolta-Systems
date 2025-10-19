@@ -45,19 +45,45 @@ document.querySelectorAll('.photoColumnImg').forEach(item => photoObs.observe(it
 
 // Kits only one button active
 
+var priceAssembled = 49.99;
+var priceDIYParts = 44.99;
+var priceEngraving = 4.99;
+var saleDiscount = 14.99;
+
+var priceBonus = priceAssembled;
+var engBonus = 0.00;
+var costAdded = false;
+
+function rdVar(num){
+  return (Math.round((num) * 100) / 100).toFixed(2);
+}
+
+function refreshPrice(){
+  var totalPrice = priceBonus + engBonus;
+  totalPrice = rdVar(totalPrice);
+  var oldPrice = priceBonus + engBonus + saleDiscount;
+  oldPrice = rdVar(oldPrice);
+  $('.kitPrice').contents().first()[0].textContent = "$" + totalPrice + " ";
+  $('.oldPrice').contents().first()[0].textContent = "$" + oldPrice + " ";
+}
+
 function setPageForItem(el){
   switch (el.id) {
     case "assembled":
-      $('.kitPrice').contents().first()[0].textContent = "$54.99 ";
-      $('.kitPrice .oldPrice').text("$64.99");
+      priceBonus = priceAssembled;
       break;
     case "DIYParts":
-      $('.kitPrice').contents().first()[0].textContent = "$49.99 ";
-      $('.kitPrice .oldPrice').text("$59.99");
+      priceBonus = priceDIYParts;
       break;
-    case "DIYFiles":
-      $('.kitPrice').contents().first()[0].textContent = "$44.99 ";
-      $('.kitPrice .oldPrice').text("$54.99");
+    case "White":
+      break;
+    case "Black":
+      break;
+    case "YesEng":
+      engBonus = priceEngraving;
+      break;
+    case "NoEng":
+      engBonus = 0.00;
       break;
 
     default:
@@ -70,5 +96,24 @@ jQuery(function($) {
     $('.button-opt').not(this).removeClass('optActive');
     $(this).addClass('optActive');
     setPageForItem(this);
+    refreshPrice();
+  });
+});
+
+jQuery(function($) {
+  $('.button-opt2').click(function() {
+    $('.button-opt2').not(this).removeClass('optActive2');
+    $(this).addClass('optActive2');
+    setPageForItem(this);
+    refreshPrice();
+  });
+});
+
+jQuery(function($) {
+  $('.button-opt3').click(function() {
+    $('.button-opt3').not(this).removeClass('optActive3');
+    $(this).addClass('optActive3');
+    setPageForItem(this);
+    refreshPrice();
   });
 });

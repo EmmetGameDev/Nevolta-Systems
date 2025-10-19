@@ -21,7 +21,7 @@
             <div class="navbar-nav">
               <a class="nav-link active underline-anim" aria-current="page" href="index.html">Home <img class="nav-icon" alt="H" width="16px" height="16px" src="img/icons/home.svg"></a>
               <a class="nav-link underline-anim" href="products.html">Products <img class="nav-icon" alt="P" width="16px" height="16px" src="img/icons/products.svg"></a>
-              <a class="nav-link underline-anim" href="#">About us <img class="nav-icon" alt="A" width="16px" height="16px" src="img/icons/aboutUs.svg"></a>
+              <a class="nav-link underline-anim" href="about.html">About us <img class="nav-icon" alt="A" width="16px" height="16px" src="img/icons/aboutUs.svg"></a>
               <a class="nav-link underline-anim" href="#">Contact <img class="nav-icon" alt="C" width="16px" height="16px" src="img/icons/contact.svg"></a>
             </div>
           </div>
@@ -30,7 +30,7 @@
     <div class="container text-center">
       <div class="row kitRow">
         <div class="col-md-6 kitCol">
-          <div id="carouselExample" class="carousel slide itemCar">
+          <div id="carouselExample" class="carousel slide itemCar" data-bs-ride="carousel">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -71,9 +71,37 @@
           <div class="optButtons">
             <button id="assembled" class="button-opt optActive">Assembled</button>
             <button id="DIYParts" class="button-opt">DIY Kit + Parts</button>
-            <button id="DIYFiles" class="button-opt">DIY Kit + Files</button>
+          </div>
+          <div class="flexColRow">
+            <div class="rowColCstm">
+              <h1 class="smallHeading">Color</h1>
+              <div class="optButtons2">
+                <button id="White" class="button-opt2 optActive2">White</button>
+                <button id="Black" class="button-opt2">Black</button>
+              </div>
+            </div>
+            <div class="rowColCstm">
+              <h1 class="smallHeading">Engraving</h1>
+              <div class="optButtons2">
+                <button id="YesEng" class="button-opt3">Yes (+$4.99)</button>
+                <button id="NoEng" class="button-opt3 optActive3">No</button>
+              </div>
+            </div>
           </div>
           <h1 class="kitPrice">$49.99 <span class="oldPrice">$64.99</span></h1>
+          <div class="saleDiv">
+            <p class="saleText color-shift">Launch Sale!</p>
+          </div>
+        </div>
+      </div>
+      <div class="row kitRow">
+        <div class="col-md-6">
+          <div class="photoHorizontal photoFullArtDiv">
+            <img src="img/LaunchSale.png" class="photoFullArt" alt="photo">
+          </div>
+        </div>
+        <div class="col-md-6">
+
         </div>
       </div>
     </div>

@@ -989,3 +989,9 @@ h1 {
     text-align: left;
     margin-bottom: 8px;
 }
+
+/* Following code was derived from contact.html */
+
+.mainPhotoContactDiv{
+    background-image: url("../img/photos/P1050595.JPG");
+}

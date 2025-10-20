@@ -995,3 +995,15 @@ h1 {
 .mainPhotoContactDiv{
     background-image: url("../img/photos/P1050595.JPG");
 }
+
+.spacer{
+    height: 200px;
+}
+
+.contactHeader{
+    font-family: 'Kode mono', monospace;
+    font-weight: 600;
+    font-size: 30px;
+    text-align: left;
+    margin-bottom: 8px;
+}

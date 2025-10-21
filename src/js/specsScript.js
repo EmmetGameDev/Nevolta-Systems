@@ -76,8 +76,14 @@ function setPageForItem(el){
       priceBonus = priceDIYParts;
       break;
     case "White":
+      $("#pictureCarousel1").attr("src", "img/photos/P1050484.JPG");
+      $("#pictureCarousel2").attr("src", "img/photos/P1050594.JPG");
+      $("#pictureCarousel3").attr("src", "img/photos/P1050586.JPG");
       break;
     case "Black":
+      $("#pictureCarousel1").attr("src", "img/photos/P1050581.JPG");
+      $("#pictureCarousel2").attr("src", "img/photos/P1050592.JPG");
+      $("#pictureCarousel3").attr("src", "img/photos/P1050581.JPG");
       break;
     case "YesEng":
       engBonus = priceEngraving;

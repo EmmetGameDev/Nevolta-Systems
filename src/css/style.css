@@ -997,7 +997,7 @@ h1 {
 }
 
 .spacer{
-    height: 200px;
+    height: 100px;
 }
 
 .contactHeader{
@@ -1017,4 +1017,31 @@ h1 {
     --bs-accordion-active-color: white;
     --bs-accordion-active-bg: black;
     --bs-accordion-btn-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round'><path d='m2 5 6 6 6-6'/></svg>");
+}
+
+.contactTextLine{
+    display: flex;
+    flex-direction: row;
+}
+
+.iconContact{
+    height: 1.5em;
+    margin-right: 7px;
+    position: relative;
+    top: 3px;
+}
+
+.contactTextEl{
+    font-weight: 500;
+}
+
+.linkMail{
+    margin-left: 15px;
+    color: black;
+    position: relative;
+    top: 3px;
+}
+
+.contactSpacer{
+    margin-bottom: 20px;
 }

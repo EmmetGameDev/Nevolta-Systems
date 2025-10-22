@@ -2,7 +2,7 @@
 
 document.addEventListener("scroll", function () {
   const navbar = document.querySelector(".navbar");
-  if (window.scrollY > 50) { // adjust threshold as needed
+  if (window.scrollY > 15) { // adjust threshold as needed
     navbar.classList.add("scrolled");
   } else {
     navbar.classList.remove("scrolled");
@@ -67,6 +67,26 @@ function refreshPrice(){
   $('.oldPrice').contents().first()[0].textContent = "$" + oldPrice + " ";
 }
 
+function setDarkMode(yn){
+  if(yn == true){
+    $('body').css("backgroundImage", "url('img/wavesBg_Dark.svg')");
+    $('body').css("color", "white");
+    $(".starIcon").each( function () {
+      $(this).attr("src", "img/icons/star 2.svg");
+    });
+  }else{
+    $('body').css("backgroundImage", "url('img/wavesBg.svg')");
+    $('body').css("color", "black");
+    $(".starIcon").each( function () {
+      $(this).attr("src", "img/icons/star.svg");
+    });
+    $(".button-opt3").each( function () {
+      $(this).css("border-color", "#fff");
+      $(this).css("color", "#white");
+    });
+  }
+}
+
 function setPageForItem(el){
   switch (el.id) {
     case "assembled":
@@ -79,11 +99,13 @@ function setPageForItem(el){
       $("#pictureCarousel1").attr("src", "img/photos/P1050484.JPG");
       $("#pictureCarousel2").attr("src", "img/photos/P1050594.JPG");
       $("#pictureCarousel3").attr("src", "img/photos/P1050586.JPG");
+      setDarkMode(false);
       break;
     case "Black":
       $("#pictureCarousel1").attr("src", "img/photos/P1050581.JPG");
       $("#pictureCarousel2").attr("src", "img/photos/P1050592.JPG");
       $("#pictureCarousel3").attr("src", "img/photos/P1050581.JPG");
+      setDarkMode(true);
       break;
     case "YesEng":
       engBonus = priceEngraving;

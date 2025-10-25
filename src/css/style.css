@@ -2,6 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
+html{
+    --secondary-theme-color: black;
+}
+
 :root{
     --alt-color: #7893b3;
 }
@@ -97,12 +101,12 @@ h1 {
 .underline-anim {
   position: relative;
   text-align: center;
-  color: #000;
+  color: var(--secondary-theme-color);
   text-decoration: none;
 }
 
 .underline-anim:hover {
-  color: #000;
+  color: var(--secondary-theme-color);
 }
 
 .underline-anim::before {
@@ -113,7 +117,7 @@ h1 {
   height: 1px;
   bottom: 0;
   left: 0;
-  background-color: #000;
+  background-color: var(--secondary-theme-color);
   transform: scaleX(0);
   transform-origin: top left;
   transition: transform 0.3s ease;
@@ -893,7 +897,7 @@ h1 {
 }
 
 .optActive, .optActive2, .optActive3{
-    border: 2px solid black;
+    border: 3px solid black;
     font-size: 16px;
 }
 

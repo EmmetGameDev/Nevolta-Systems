@@ -74,15 +74,24 @@ function setDarkMode(yn){
     $(".starIcon").each( function () {
       $(this).attr("src", "img/icons/star 2.svg");
     });
+    $(".button-opt3, .button-opt2, .button-opt").each( function () {
+      $(this).css("border-color", "#fff");
+      $(this).css("color", "white");
+      $(this).css("background-color", "black");
+    });
+    $(".siteFooter").css("background-color", "rgba(255, 255, 255, 0.1)");
+    $("html").attr("style","--secondary-theme-color:white");
+    $(".nevoltaLogo").attr("src", "img/NevoltaTextLogo_White.svg")
   }else{
     $('body').css("backgroundImage", "url('img/wavesBg.svg')");
     $('body').css("color", "black");
     $(".starIcon").each( function () {
       $(this).attr("src", "img/icons/star.svg");
     });
-    $(".button-opt3").each( function () {
-      $(this).css("border-color", "#fff");
-      $(this).css("color", "#white");
+    $(".button-opt3, .button-opt2, .button-opt").each( function () {
+      $(this).css("border-color", "#000");
+      $(this).css("color", "black");
+      $(this).css("background-color", "white");
     });
   }
 }

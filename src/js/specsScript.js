@@ -80,8 +80,12 @@ function setDarkMode(yn){
       $(this).css("background-color", "black");
     });
     $(".siteFooter").css("background-color", "rgba(255, 255, 255, 0.1)");
-    $("html").attr("style","--secondary-theme-color:white");
-    $(".nevoltaLogo").attr("src", "img/NevoltaTextLogo_White.svg")
+    $(".nevoltaLogo").attr("src", "img/NevoltaTextLogo_White.svg");
+    $(".homeIcon").attr("src", "img/icons/home_white.svg");
+    $(".productsIcon").attr("src", "img/icons/products_white.svg");
+    $(".aboutIcon").attr("src", "img/icons/aboutUs_white.svg");
+    $(".contactIcon").attr("src", "img/icons/contact_white.svg");
+    $("html").attr("style","--transparent-theme-color:rgba(255, 255, 255, 0.1); --secondary-theme-color:white");
   }else{
     $('body').css("backgroundImage", "url('img/wavesBg.svg')");
     $('body').css("color", "black");
@@ -93,6 +97,13 @@ function setDarkMode(yn){
       $(this).css("color", "black");
       $(this).css("background-color", "white");
     });
+    $(".siteFooter").css("background-color", "rgba(0, 0, 0, 0.1)");
+    $(".nevoltaLogo").attr("src", "img/NevoltaTextLogo.svg");
+    $(".homeIcon").attr("src", "img/icons/home.svg");
+    $(".productsIcon").attr("src", "img/icons/products.svg");
+    $(".aboutIcon").attr("src", "img/icons/aboutUs.svg");
+    $(".contactIcon").attr("src", "img/icons/contact.svg");
+    $("html").attr("style","--transparent-theme-color:rgba(255, 255, 255, 0.2); --secondary-theme-color:black");
   }
 }
 

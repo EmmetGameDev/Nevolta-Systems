@@ -4,6 +4,7 @@
 
 html{
     --secondary-theme-color: black;
+    --transparent-theme-color: rgba(255, 255, 255, 0.2);
 }
 
 :root{
@@ -39,14 +40,14 @@ h1 {
 }
 
 #MainNav{
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--secondary-theme-color);
     transition: background-color 0.3s ease, box-shadow 0.3s ease, border-bottom 0.3s ease, backdrop-filter 0.3s ease;
     background-color: transparent;
     padding: 10px;
 }
 
 #MainNav.scrolled{
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: var(--transparent-theme-color);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     border-bottom: 1px solid transparent;
@@ -60,7 +61,7 @@ h1 {
 }
 
 #NavBurgerMenu{
-    border: 1px solid black;
+    border: 1px solid var(--secondary-theme-color);
 }
 
 .nav-link{
@@ -128,7 +129,7 @@ h1 {
 
 .navbar-toggler-icon {
     background-image: none!important;
-    background-color: black;
+    background-color: var(--secondary-theme-color);
     border-radius: 1px;
     height: 2px;
     width: 25px;
@@ -140,7 +141,7 @@ h1 {
 
 .navbar-toggler-icon::before {
     display: block;
-    background-color: black;
+    background-color: var(--secondary-theme-color);
     border-radius: 1px;
     height: 2px;
     content: "";
@@ -152,7 +153,7 @@ h1 {
 
 .navbar-toggler-icon::after {
     display: block;
-    background-color: black;
+    background-color: var(--secondary-theme-color);
     border-radius: 1px;
     height: 2px;
     content: "";
@@ -165,7 +166,7 @@ h1 {
 .navbar-dark .navbar-toggler-icon,
 .navbar-dark .navbar-toggler-icon::before,
 .navbar-dark .navbar-toggler-icon::after {
-    background-color: black;
+    background-color: var(--secondary-theme-color);
 }
 
 .navbar-toggler:not(.collapsed) .navbar-toggler-icon {
@@ -771,7 +772,7 @@ h1 {
 }
 
 .customLink{
-    color: black;
+    color: var(--secondary-theme-color);
 }
 
 .consolesListCap{
@@ -1052,3 +1053,9 @@ h1 {
 .contactSpacer{
     margin-bottom: 20px;
 }
+
+.kitsTextBlock{
+    text-align: left;
+    margin-bottom: 20px;
+}
+

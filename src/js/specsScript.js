@@ -45,6 +45,7 @@ document.querySelectorAll('.photoColumnImg').forEach(item => photoObs.observe(it
 
 // Kits only one button active
 
+var engravingFree = true;
 var priceAssembled = 49.99;
 var priceDIYParts = 44.99;
 var priceEngraving = 4.99;
@@ -59,10 +60,17 @@ function rdVar(num){
 }
 
 function refreshPrice(){
-  var totalPrice = priceBonus + engBonus;
-  totalPrice = rdVar(totalPrice);
-  var oldPrice = priceBonus + engBonus + saleDiscount;
-  oldPrice = rdVar(oldPrice);
+  if(engravingFree == true){
+    var totalPrice = priceBonus;
+    totalPrice = rdVar(totalPrice);
+    var oldPrice = priceBonus + saleDiscount;
+    oldPrice = rdVar(oldPrice);
+  }else{
+    var totalPrice = priceBonus + engBonus;
+    totalPrice = rdVar(totalPrice);
+    var oldPrice = priceBonus + engBonus + saleDiscount;
+    oldPrice = rdVar(oldPrice);
+  }
   $('.kitPrice').contents().first()[0].textContent = "$" + totalPrice + " ";
   $('.oldPrice').contents().first()[0].textContent = "$" + oldPrice + " ";
 }
